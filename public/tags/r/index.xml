@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R on David Aikman</title>
+    <link>/tags/r/</link>
+    <description>Recent content in R on David Aikman</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 14 Nov 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/r/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>False Normality</title>
+      <link>/2019/11/14/false-normality/</link>
+      <pubDate>Thu, 14 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/11/14/false-normality/</guid>
+      <description>pre {max-height: 300px;overflow-y: auto;}pre[class] {max-height: 300px;}A lot of statistical tests assume normal distribution of raw data or residuals from predicted model outcomes. One way to check for normality is visual, using histograms or Q-Q plots. Another way is statistical.
+Of the statistical tests of normality, the Shapiro-Wilk test is the most powerful. See Razali and Wah for further discussion about power.</description>
+    </item>
+    
+  </channel>
+</rss>

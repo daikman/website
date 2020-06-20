@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on David Aikman</title>
+    <link>/post/</link>
+    <description>Recent content in Posts on David Aikman</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 25 May 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Symptoms of depression as stochastic cellular automata</title>
+      <link>/2020/05/25/symptoms-of-depression-as-stochastic-cellular-automata/</link>
+      <pubDate>Mon, 25 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/05/25/symptoms-of-depression-as-stochastic-cellular-automata/</guid>
+      <description>This is inspired by the paper ‘Mean field dynamics of stochastic cellular automata for random and small-world graphs’1, which goes beyond depression and stochastic cellular automata.
+As opposed to typical ‘latent factor models’ of psychopathology (mental illness), whereby an illness like depression is caused by some underlying mechanism, independant from its symptoms, there are ‘network models’ that treat the symptoms of an illness as being the cause of each other (see Robinaugh et al.</description>
+    </item>
+    
+    <item>
+      <title>Belief Polarization</title>
+      <link>/2020/05/18/belief-polarization/</link>
+      <pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/05/18/belief-polarization/</guid>
+      <description>This is an animated simulation based on the paper ‘The polarization within and across individuals: the hierarchical Ising opinion model’.
+(You probably can’t see it properly on a small screen.)
+Each circle represents a person. The colour of the circle shows what that person currently believes. The more green or blue a circle, the more strongly the person aligns with the green or blue belief (respectively). The average belief of all people can be seen on the right-hand panel, as well as the recent history of the average belief.</description>
+    </item>
+    
+    <item>
+      <title>Hering Illusion</title>
+      <link>/2020/05/02/hering-illusion/</link>
+      <pubDate>Sat, 02 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/05/02/hering-illusion/</guid>
+      <description>This is the Hering Illusion!
+Click anywhere on the animation to take control (then click again to relinquish your iron grip).
+The straight red lines should appear to be bent when they are close enough to the centre of the radial lines. If you wait, the red lines will change into a red square (not because of the illusion - I just programmed a square to replace them).</description>
+    </item>
+    
+    <item>
+      <title>Central Limit Theorem and Latent Variables</title>
+      <link>/2019/12/03/central-limit-theorem-and-latent-variables/</link>
+      <pubDate>Tue, 03 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/12/03/central-limit-theorem-and-latent-variables/</guid>
+      <description>pre {max-height: 300px;overflow-y: auto;}pre[class] {max-height: 300px;}I have recently come across the concept of Central Limit Theorem (CLT), and wanted to visualise the phenomenon using an interactive  shiny  app.
+Basically, CLT says that when you find the means (or sums, or other functions) of many variables, the resulting distribution is likely to be normal, independent of the distributions of each variable.</description>
+    </item>
+    
+    <item>
+      <title>Correlation p-values</title>
+      <link>/2019/11/26/correlation-p-values/</link>
+      <pubDate>Tue, 26 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/11/26/correlation-p-values/</guid>
+      <description>pre {max-height: 300px;overflow-y: auto;}pre[class] {max-height: 300px;}In Daniel Laken’s MOOC, Improving Your Statistical Inferences, he discusses the distribution of p-values you can expect from a t-test when there is a true effect, and when there is not.
+If there is no true effect, all p-values are equally likely.If there is a true effect, the probability of seeing a significant p-value is equivalent to the power of the test.</description>
+    </item>
+    
+    <item>
+      <title>False Normality</title>
+      <link>/2019/11/14/false-normality/</link>
+      <pubDate>Thu, 14 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/11/14/false-normality/</guid>
+      <description>pre {max-height: 300px;overflow-y: auto;}pre[class] {max-height: 300px;}A lot of statistical tests assume normal distribution of raw data or residuals from predicted model outcomes. One way to check for normality is visual, using histograms or Q-Q plots. Another way is statistical.
+Of the statistical tests of normality, the Shapiro-Wilk test is the most powerful. See Razali and Wah for further discussion about power.</description>
+    </item>
+    
+  </channel>
+</rss>

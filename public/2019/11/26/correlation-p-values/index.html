@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.72.0" />
+
+
+<title>Correlation p-values - David Aikman</title>
+<meta property="og:title" content="Correlation p-values - David Aikman">
+
+
+  <link href='/favicon.ico' rel='icon' type='image/x-icon'/>
+
+
+
+  
+
+
+
+
+
+
+
+
+<link href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+
+
+
+<link rel="stylesheet" href="/css/fonts.css" media="all">
+<link rel="stylesheet" href="/css/main.css" media="all">
+
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="/" class="nav-logo">
+    <img src="/images/medrawing.png"
+         width="200"
+         height="200"
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/about/">About Me</a></li>
+    
+    <li><a href="/">Blog</a></li>
+    
+    <li><a href="https://twitter.com/davidjaikman">Twitter</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+    <span class="article-duration">3 min read</span>
+    
+
+    <h1 class="article-title">Correlation p-values</h1>
+
+    
+    <span class="article-date">2019-11-26</span>
+    
+
+    <div class="article-content">
+      
+
+
+<style type="text/css">
+pre {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+pre[class] {
+  max-height: 300px;
+}
+</style>
+<p>In <a href="https://twitter.com/lakens" target="_blank">Daniel Laken</a>’s MOOC, <a href="https://www.coursera.org/learn/statistical-inferences" target="_blank">Improving Your Statistical Inferences</a>, he discusses the distribution of p-values you can expect from a t-test when there is a true effect, and when there is not.</p>
+<ul>
+<li>If there is no true effect, all p-values are equally likely.</li>
+<li>If there is a true effect, the probability of seeing a significant p-value is equivalent to the power of the test.</li>
+</ul>
+<p>I decided to try some simulations for myself, but instead of using t-tests, I used Spearman’s Rank correlations. I simulated 110,000 random samples of two normally distributed variables. The correlation between the variables was controlled such that there were 10,000 samples at r = 0, 10,000 at r = 0.1 and so on until r = 1. Each sample was tested using Spearman’s Rank and the p-values of each test were recorded.</p>
+<p>The distribution of p-values for each effect size can be seen below. Each bar is 0.05 “wide”, meaning all values in the first bar are significant (when alpha = 0.05).</p>
+<p><img src="/images/CorrelationP.gif" /></p>
+<p>As expected, when there is no true effect (i.e., population correlation = 0), p-values are pretty much uniformly distributed. When there is an effect (population correlation &gt; 0), the power of the test increases with the size of the effect.</p>
+<p>What struck me was that from population correlation of 0.7 and above, the power of the test is 100%. I wouldn’t have expected this, given that the sample size in the simulations was quite small (fixed at 50). I didn’t experiment with the sample size, but you can mess around with my code and see what happens to the power.</p>
+<pre class="r"><code>## Loading packages
+library(MASS)
+library(tidyverse)
+library(ggplot2)
+library(gganimate)
+
+## Making a funciton to record p-values from Spearman&#39;s Rank tests
+## CHANGE &quot;n.iter&quot; IF YOU DON&#39;T WANT TO RUN 110,000 SIMUALTIONS
+cor.power.test &lt;- function(r, size = 50, n.iter = 10000) {
+  
+  p.vals &lt;- vector()
+  coefs &lt;- vector()
+
+for (i in 1:n.iter) {
+  data &lt;- mvrnorm(n=size, mu=c(0, 0), Sigma=matrix(c(1, r, r, 1), nrow=2))
+  x &lt;- data[, 1]
+  y &lt;- data[, 2]
+  test &lt;- cor.test(x, y, method = &quot;spearman&quot;)
+  coefs[i] &lt;- test$estimate
+  p.vals[i] &lt;- test$p.value
+}
+  
+Data.r &lt;- tibble(&quot;True.R&quot; = r, &quot;rho&quot; = coefs, &quot;p&quot; = p.vals)
+  
+}
+
+## Creating vector for r = 0 to r = 1.
+rlist &lt;- seq(0, 1, by = 0.1)
+
+
+## Iterating function with different r values and making a dataframe of results
+data.cor.power &lt;- purrr::map(rlist, cor.power.test) %&gt;% bind_rows()
+
+
+## Plotting and animating
+g &lt;- ggplot(data.cor.power, aes(x = p)) +
+  geom_histogram(binwidth = 0.05) +
+  transition_states(True.R, transition_length = 1, state_length = 2) +
+  ggtitle(&#39;Pop. Correlation = {closest_state}&#39;)
+
+## Uncomment the next line to save animated plot &quot;g&quot; as a gif.
+#anim_save(&quot;CorrelationP.gif&quot;, g)</code></pre>
+
+    </div>
+  </article>
+
+  
+
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="/index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+          </li>
+          <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="/images/hugo-logo.png" alt="Img link to Hugo website" width="22" height="22"></a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+    
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+    
+<script src="/js/math-code.js"></script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+    
+  </body>
+</html>
+

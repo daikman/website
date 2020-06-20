@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.72.0" />
+
+
+<title>False Normality - David Aikman</title>
+<meta property="og:title" content="False Normality - David Aikman">
+
+
+  <link href='/favicon.ico' rel='icon' type='image/x-icon'/>
+
+
+
+  
+
+
+
+
+
+
+
+
+<link href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+
+
+
+<link rel="stylesheet" href="/css/fonts.css" media="all">
+<link rel="stylesheet" href="/css/main.css" media="all">
+
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="/" class="nav-logo">
+    <img src="/images/medrawing.png"
+         width="200"
+         height="200"
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/about/">About Me</a></li>
+    
+    <li><a href="/">Blog</a></li>
+    
+    <li><a href="https://twitter.com/davidjaikman">Twitter</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+    <span class="article-duration">3 min read</span>
+    
+
+    <h1 class="article-title">False Normality</h1>
+
+    
+    <span class="article-date">2019-11-14</span>
+    
+
+    <div class="article-content">
+      
+
+
+<style type="text/css">
+pre {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+pre[class] {
+  max-height: 300px;
+}
+</style>
+<p>A lot of statistical tests assume normal distribution of raw data or residuals from predicted model outcomes. One way to check for normality is visual, using histograms or Q-Q plots. Another way is statistical.</p>
+<p>Of the statistical tests of normality, the Shapiro-Wilk test is the most powerful. See <a href="https://www.researchgate.net/profile/Bee_Yap/publication/267205556_Power_Comparisons_of_Shapiro-Wilk_Kolmogorov-Smirnov_Lilliefors_and_Anderson-Darling_Tests/links/5477245b0cf29afed61446e1/Power-Comparisons-of-Shapiro-Wilk-Kolmogorov-Smirnov-Lilliefors-and-Anderson-Darling-Tests.pdf" target="_blank">Razali and Wah</a> for further discussion about power.</p>
+<p>I’m more interested in the false-positive rate of the Shapiro-Wilk test than it’s power (the true-positive rate), as
+if the test falsely identifies data from a non-normal population as normal, it would undermine further analyses, and the conclusions of a study. On the other hand, if the test finds data from a normal population to be non-normal, an alternative analysis would be chosen that is more robust to non-normal distributions, which would probably not damage the study in any way if the test was incorrect.</p>
+<p>But how often might data from a non-normal population be identified as normal? To provide a tentative answer to this question, I simulated continuous, random and univariate data of various sample sizes to assess the <em>false normality</em> rate of the Shapiro-Wilk test.</p>
+<p>Using the code appended to this post, this plot was produced:</p>
+<p><img src="/images/falsenormality.png" style="width:90.0%" /></p>
+<p>From around a sample size of 100, the Shapiro-Wilk test is pretty much 100% accurate, never identifying a normal distribution in completely random data across 10,000 iterations. When the sample size is around 50, there is a 25% probability of random data being identified as normal. The lower the sample size, the higher the false normality rate. (Look at the variable <code>falseNormData</code> defined in the code below to see the exact values.)</p>
+<p>From this exploration I think it is safe to say that, with small sample sizes, visual methods may be more appropriate for assessing normality, and the population distribution is hard to estimate.</p>
+<pre class="r"><code>## Load required packages
+library(tidyverse)
+library(purrr)
+library(ggplot2)
+
+## Set Seed
+set.seed(1)
+
+## Making function to find &quot;false normality rate&quot; for one sample of uniform (random) data
+falseNorm &lt;- function(samp.size) {
+  
+n.tests &lt;- 10000
+
+tests &lt;- vector(length = n.tests)
+
+for (i in 1:n.tests) {
+  u &lt;- runif(samp.size, min = 0, max = 10)
+  
+  tests[i] &lt;- shapiro.test(u)$p.value
+
+}
+
+falseNormality &lt;- mean(tests&gt;=0.05)
+
+falseNormDataTemp &lt;- tibble(&quot;false.normality&quot; = falseNormality, &quot;sample.size&quot; = samp.size)
+
+}
+
+
+## Making vector to put into falseNormR() as &quot;samp.size&quot; argument
+## MINUMUM SAMPLE SIZE IS 3
+samp.sizes &lt;- c(3, seq(10, 200, by = 10))
+
+## Iterating falseNorm function and making dataframes
+falseNormData &lt;- purrr::map(samp.sizes, falseNorm) %&gt;% bind_rows()
+
+## Plotting
+g &lt;- ggplot(falseNormData, aes(x = sample.size, y = false.normality)) +
+  geom_density(stat = &quot;identity&quot;, alpha = 0.5, fill = &quot;grey&quot;) +
+  ylab(&quot;False Normality&quot;) +
+  xlab(&quot;Sample Size&quot;)
+
+## Uncomment next line to save the plot as an image
+#ggsave(&quot;falsenormality.png&quot;, g)</code></pre>
+
+    </div>
+  </article>
+
+  
+
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="/index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+          </li>
+          <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="/images/hugo-logo.png" alt="Img link to Hugo website" width="22" height="22"></a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+    
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+    
+<script src="/js/math-code.js"></script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+    
+  </body>
+</html>
+

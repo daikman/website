@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.72.0" />
+
+
+<title>Symptoms of depression as stochastic cellular automata - David Aikman</title>
+<meta property="og:title" content="Symptoms of depression as stochastic cellular automata - David Aikman">
+
+
+  <link href='/favicon.ico' rel='icon' type='image/x-icon'/>
+
+
+
+  
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/fonts.css" media="all">
+<link rel="stylesheet" href="/css/main.css" media="all">
+
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="/" class="nav-logo">
+    <img src="/images/medrawing.png"
+         width="200"
+         height="200"
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/about/">About Me</a></li>
+    
+    <li><a href="/">Blog</a></li>
+    
+    <li><a href="https://twitter.com/davidjaikman">Twitter</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+    <span class="article-duration">3 min read</span>
+    
+
+    <h1 class="article-title">Symptoms of depression as stochastic cellular automata</h1>
+
+    
+    <span class="article-date">2020-05-25</span>
+    
+
+    <div class="article-content">
+      
+
+
+<iframe src="https://editor.p5js.org/daikman/present/qh4ST8l3s" style="width: 810px; height: 558px; border: none;">
+</iframe>
+<p><b>This is inspired by the paper ‘Mean field dynamics of stochastic cellular automata for random and small-world graphs’<sup><a href="#ref">1</a></sup>, which goes beyond depression and stochastic cellular automata.</b></p>
+<p>As opposed to typical ‘latent factor models’ of psychopathology (mental illness), whereby an illness like depression is caused by some underlying mechanism, independant from its symptoms, there are ‘network models’ that treat the symptoms of an illness as being the cause of each other (see Robinaugh et al., 2020<sup><a href="#ref">2</a></sup> for a review).</p>
+<p>The model illustrated above follows that second approach, modelling each symptom of depression (I arbitrarily chose 16 symptoms from Fried, 2017<sup><a href="#ref">3</a></sup>) as a node in a network of cellular automata (Conway’s game of life is a well-known example of cellular automata). This means that whether or not a symptom is present depends on some rule that refers to the presence or absence of the rest of the symptoms in the network.</p>
+<p>In the example above, I use the rule described in the paper<sup><a href="#ref">1</a></sup>. This says that if fewer than or equal to half of a node’s neighbours are active (black), the probability that the node will become active is <span class="math inline">\(p\)</span> (which you can adjust with the slider). If more than half of a node’s neighbours are active, its probability of activation is 1-<span class="math inline">\(p\)</span>.</p>
+<p>Each node has 5 neighbours: a node to its left, to its right, above it, below it, AND itself in its previous state. Where nodes do not have visible neighbours, dotted lines represent a connection to the node on the opposite side of the grid.</p>
+<p><img src="/images/depConnect.png" /></p>
+<p>For example, the node on the left and the node on the right are neighbours.</p>
+<p>Something interesting (and possibly realistic) about this model is that it is <em>bistable</em> at low values of <span class="math inline">\(p\)</span>. For example, if <span class="math inline">\(p\)</span> is very low (but not 0), it is likely that the network is either very active or very inactive, with some chance of transitioning from one state to the other. Set <span class="math inline">\(p\)</span> to 0.15 and speed up the animation to see this effect quite clearly. When <span class="math inline">\(p\)</span> is even lower, it might take a while for you to see a transition between states of activity.</p>
+<p>One way this model may not be particularly realistic is that symptoms are either on or off. However, symptoms of depression (and other mental illnesses) are often treated this way during diagnosis, so the model may still be clinically relevant.</p>
+<p>For a better discussion of the model, see Waldorp and Kossakowski (2020)<sup><a href="#ref">1</a></sup>. They also expand on how to summarise the model in more useful ways (through the mean field of the network), but the mathematics is beyond me at the moment. I might implement it here when I better understand.</p>
+<div id="ref" class="section level1">
+<h1>References</h1>
+<ol>
+<li>
+Waldorp, L., &amp; Kossakowski, J. (2020). Mean field dynamics of stochastic cellular automata for random and small-world graphs. Journal of Mathematical Psychology, 97, 102380. doi: <a href="https://doi.org/10.1016/j.jmp.2020.102380" class="uri">https://doi.org/10.1016/j.jmp.2020.102380</a>.
+</li>
+<br>
+<li>
+Robinaugh, D. J., Hoekstra, R. H., Toner, E. R., &amp; Borsboom, D. (2020). The network approach to psychopathology: a review of the literature 2008–2018 and an agenda for future research. Psychological Medicine, 50(3), 353-366. doi: <a href="https://doi.org/10.1017/S0033291719003404" class="uri">https://doi.org/10.1017/S0033291719003404</a>.
+</li>
+<br>
+<li>
+Fried, E. I. (2017). The 52 symptoms of major depression: Lack of content overlap among seven common depression scales. Journal of Affective Disorders, 208, 191-197. doi: <a href="https://doi.org/10.1016/j.jmp.2020.102380" class="uri">https://doi.org/10.1016/j.jmp.2020.102380</a>.
+</li>
+</ol>
+</div>
+
+    </div>
+  </article>
+
+  
+
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="/index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+          </li>
+          <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="/images/hugo-logo.png" alt="Img link to Hugo website" width="22" height="22"></a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+    
+
+    
+<script src="/js/math-code.js"></script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+    
+  </body>
+</html>
+

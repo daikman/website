@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.72.0" />
+
+
+<title>Belief Polarization - David Aikman</title>
+<meta property="og:title" content="Belief Polarization - David Aikman">
+
+
+  <link href='/favicon.ico' rel='icon' type='image/x-icon'/>
+
+
+
+  
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/fonts.css" media="all">
+<link rel="stylesheet" href="/css/main.css" media="all">
+
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="/" class="nav-logo">
+    <img src="/images/medrawing.png"
+         width="200"
+         height="200"
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/about/">About Me</a></li>
+    
+    <li><a href="/">Blog</a></li>
+    
+    <li><a href="https://twitter.com/davidjaikman">Twitter</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+    <span class="article-duration">3 min read</span>
+    
+
+    <h1 class="article-title">Belief Polarization</h1>
+
+    
+    <span class="article-date">2020-05-18</span>
+    
+
+    <div class="article-content">
+      
+
+
+<iframe src="https://editor.p5js.org/daikman/embed/R9Pvfdq_6" style="width: 730px; height: 530px; border: none;">
+</iframe>
+<p><b>This is an animated simulation based on the paper <a href="#ref">‘The polarization within and across individuals: the hierarchical Ising opinion model’</a>.</p>
+<p>(You probably can’t see it properly on a small screen.)</b></p>
+<p>Each circle represents a person. The colour of the circle shows what that person currently believes. The more green or blue a circle, the more strongly the person aligns with the green or blue belief (respectively). The average belief of all people can be seen on the right-hand panel, as well as the recent history of the average belief.</p>
+<img src="/images/selectedPerson.png" />
+<div style="font-size: 0.8em;">
+A selected person
+</div>
+<p>Click on any person to see more information about them.</p>
+<img src="/images/statsPerson.png" />
+<div style="font-size: 0.8em;">
+A person’s statistics
+</div>
+<p>The belief bar shows how much the person supports green and blue. A completely blue bar tells you they are extremely supportive of the blue belief.</p>
+<p>The information bar tells you the relative strength with which the information someone has supports each position.</p>
+<p>The attention bar tells you how attentive the person is the the green/blue issue. See the technical section below to see why this is important.</p>
+<p>‘Talking to’ gives you information that is not useful in any way.</p>
+<img src="/images/talkDemo.png" />
+<div style="font-size: 0.8em;">
+People talking
+</div>
+<p>When an orange line appears between two circles, this means they are talking about the great blue vs. green debate. In most cases, this will result in an exchange of information, which may or may not result in a change of belief (see below). This information either supports the green or blue position.</p>
+<img src="/images/personDemo.png" />
+<div style="font-size: 0.8em;">
+Polarization happening before your very eyes
+</div>
+<p>You may notice that although the average belief remains around equal support for each position, this is not because most people are indifferent to the issue. It is because the issue is very polarizing.</p>
+<p>If you click on any person, you will see that there belief tends towards the extremes. This is easier to see if you speed up the animation.</p>
+<p>There are many ways that the model this animation is based on seems to mirror real-life belief change. I might write more about it, but for now, see the original paper.</p>
+<div id="technical-explanation" class="section level2">
+<h2>Technical Explanation</h2>
+Here is the basic algorithm:
+<ul>
+<li>
+People move around randomly.
+</li>
+<li>
+At each interval (that you can change with the speed slider), a person is selected to make conversation. The probability that a person will be selected depends on the attention they are paying to the issue (i.e., how much they care about it).
+</li>
+<li>
+Once a person is selected, they make conversation with their nearest neighbour.
+</li>
+<li>
+If the conversing people are not hugely differing in opinion, they exchange information and both become more attentive to the issue.
+</li>
+<li>
+Everyone else’s attention to the issue decays over time.
+</li>
+<li>
+Before the next conversation, all peoples’ beliefs are updated based on the information they have.
+</li>
+</ul>
+<p>For a fuller explanation, see the original paper. My version makes a few departures from the equations in the paper, but I think it broadly represents the same phenomena.</p>
+</div>
+<div id="ref" class="section level1">
+<h1>Reference</h1>
+<p>Han L J van der Maas, Jonas Dalege, Lourens Waldorp, The polarization within and across individuals: the hierarchical Ising opinion model, Journal of Complex Networks, Volume 8, Issue 2, April 2020, cnaa010, <a href="https://doi.org/10.1093/comnet/cnaa010" class="uri">https://doi.org/10.1093/comnet/cnaa010</a></p>
+</div>
+
+    </div>
+  </article>
+
+  
+
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="/index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+          </li>
+          <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="/images/hugo-logo.png" alt="Img link to Hugo website" width="22" height="22"></a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+    
+
+    
+
+    
+  </body>
+</html>
+

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.72.0" />
+
+
+<title>Central Limit Theorem and Latent Variables - David Aikman</title>
+<meta property="og:title" content="Central Limit Theorem and Latent Variables - David Aikman">
+
+
+  <link href='/favicon.ico' rel='icon' type='image/x-icon'/>
+
+
+
+  
+
+
+
+
+
+
+
+
+<link href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+
+
+
+<link rel="stylesheet" href="/css/fonts.css" media="all">
+<link rel="stylesheet" href="/css/main.css" media="all">
+
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="/" class="nav-logo">
+    <img src="/images/medrawing.png"
+         width="200"
+         height="200"
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/about/">About Me</a></li>
+    
+    <li><a href="/">Blog</a></li>
+    
+    <li><a href="https://twitter.com/davidjaikman">Twitter</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+    <span class="article-duration">2 min read</span>
+    
+
+    <h1 class="article-title">Central Limit Theorem and Latent Variables</h1>
+
+    
+    <span class="article-date">2019-12-03</span>
+    
+
+    <div class="article-content">
+      
+
+
+<style type="text/css">
+pre {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+pre[class] {
+  max-height: 300px;
+}
+</style>
+<iframe id="example1" src="https://daikman.shinyapps.io/CLTLV/" style="border: 1px dashed black; width: 720px; height: 535px" frameborder="0">
+</iframe>
+<p><b>I have recently come across the concept of Central Limit Theorem (CLT)</b>, and wanted to visualise the phenomenon using an interactive <code> shiny </code> app.</p>
+<p>Basically, CLT says that when you find the means (or sums, or other functions) of many variables, the resulting distribution is likely to be normal, independent of the distributions of each variable.</p>
+<p>In the context of Psychometrics, CLT means that multi-item measures may produce normally distributed data when aggregated, regardless of the distribution of responses to each individual item.</p>
+<p>With the app below (also found at <a href="https://daikman.shinyapps.io/CLTLV/" class="uri">https://daikman.shinyapps.io/CLTLV/</a>), you can simulate data collected from a measure of a latent variable. In the simulation, all items have the same underlying distribution of responses, but CLT would apply in other cases also.</p>
+<p>Notice how sample size makes very little difference to the distribution of observed variable means. Of course, sample size is important for other reasons.</p>
+<p>The app is based on a custom <code>R</code> function, as defined below:</p>
+<pre class="r"><code>library(tidyverse)
+library(ggplot2)
+library(cowplot)
+library(shiny)
+
+CLT &lt;- function(n.items = 10, sample.size = 50, 
+                distribution = c(&quot;normal&quot;, &quot;uniform&quot;, &quot;poisson&quot;, &quot;exponential&quot;, &quot;binomial&quot;)) {
+  
+  sample.means &lt;- switch(distribution,
+              &quot;exponential&quot; = replicate(n.items, mean(rexp(sample.size)))
+              %&gt;% as.data.frame(),
+              &quot;normal&quot; = replicate(n.items, mean(rnorm(sample.size)))
+              %&gt;% as.data.frame(),
+              &quot;uniform&quot; = replicate(n.items, mean(runif(sample.size, -1, 1)))
+              %&gt;% as.data.frame(),
+              &quot;poisson&quot; = replicate(n.items, mean(rpois(sample.size, 1)))
+              %&gt;% as.data.frame(),
+              &quot;binomial&quot; = replicate(n.items, mean(rbinom(sample.size, 1, .7)))
+              %&gt;% as.data.frame()
+              )
+
+  gQQ &lt;- ggplot(sample.means, aes(sample = .)) +
+    stat_qq() +
+    stat_qq_line(color = &quot;blue&quot;) +
+    xlab(&quot;Theoretical&quot;) +
+    ylab(&quot;Sample&quot;)
+
+  gH &lt;- ggplot(sample.means, aes(x =  .)) +
+    geom_density(color = &quot;black&quot;, fill = &quot;red&quot;, alpha = 0.5) +
+    stat_function(color = &quot;blue&quot;, size = 1, fun = dnorm, 
+                  args = list(mean = mean(sample.means$.), sd = sd(sample.means$.))) +
+    ylab(&quot;Density&quot;)
+
+  cowplot::plot_grid(gQQ, gH, ncol = 1)
+
+}</code></pre>
+
+    </div>
+  </article>
+
+  
+
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="/index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+          </li>
+          <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="/images/hugo-logo.png" alt="Img link to Hugo website" width="22" height="22"></a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+    
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+    
+<script src="/js/math-code.js"></script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+    
+  </body>
+</html>
+
