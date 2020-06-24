@@ -6,10 +6,24 @@
     <description>Recent content in R on David Aikman</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 14 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 23 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/r/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Invisible Women: NHS Condition Descriptions</title>
+      <link>/2020/06/23/invisible-women-nhs-web-scraping/</link>
+      <pubDate>Tue, 23 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/06/23/invisible-women-nhs-web-scraping/</guid>
+      <description>After reading Invisible Women, I happened to come across this article on WebMD about menstrual pain that lists risk factors like this:
+&#34;The following circumstances may make a woman more likely to experience menstrual cramps:
+She started her first period at an early age (younger than 11 years).
+Her menstrual periods are heavy.
+She is overweight or obese.
+She smokes cigarettes or uses alcohol.</description>
+    </item>
     
     <item>
       <title>False Normality</title>
