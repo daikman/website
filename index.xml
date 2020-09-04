@@ -17,8 +17,7 @@
       <pubDate>Thu, 03 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>/2020/09/03/bias-and-noise/</guid>
-      <description>Imagine you’ve hit this target 20 times (represented by the yellow dots). You were trying to hit the bullseye, but you might not have been completely accurate. Sometimes there is bias in your aim, which means you are accidentally aiming at a point other than the bullseye. Sometimes there is noise. This means you do not hit where you are aiming 100% of the time.
-Increasing the noise using the slider increases the distance between the dots and the centre of the dots (where the dashed blue lines meet) on average.</description>
+      <description>Imagine you’ve hit this target 20 times, with whatever weapon you’d like. Your hits are represented by the yellow dots. You were trying to hit the bullseye, but you might not have been completely accurate. There might have been some bias in your aim, which means you are accidentally aiming at a point other than the bullseye. And there might have been some noise. This means you do not hit where you are aiming 100% of the time.</description>
     </item>
     
     <item>
