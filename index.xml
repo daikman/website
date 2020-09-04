@@ -6,10 +6,20 @@
     <description>Recent content on David Aikman</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 23 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 03 Sep 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Bias and Noise</title>
+      <link>/2020/09/03/bias-and-noise/</link>
+      <pubDate>Thu, 03 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/09/03/bias-and-noise/</guid>
+      <description>Imagine you’ve hit this target 20 times (represented by the yellow dots). You were trying to hit the bullseye, but you might not have been completely accurate. Sometimes there is bias in your aim, which means you are accidentally aiming at a point other than the bullseye. Sometimes there is noise. This means you do not hit where you are aiming 100% of the time.
+Increasing the noise using the slider increases the distance between the dots and the centre of the dots (where the dashed blue lines meet) on average.</description>
+    </item>
     
     <item>
       <title>Invisible Women: NHS Condition Descriptions</title>
@@ -93,8 +103,9 @@ Of the statistical tests of normality, the Shapiro-Wilk test is the most powerfu
       <pubDate>Thu, 05 May 2016 21:48:51 -0700</pubDate>
       
       <guid>/about/</guid>
-      <description>I&amp;rsquo;ll soon complete my MSc in Psychological Research Methods (at the University of Glasgow), after which I hope to pursue a PhD in something related to health, computational modeling, artificial intelligence, or all three. Additionally, (since reading Invisible Women) I&amp;rsquo;ve become interested in machine learning bias and &amp;lsquo;data gaps&amp;rsquo;.
-My Bachelors and Masters research projects are psychometrics-focussed, using techniques like Structural Equation Modeling to investigate the belief in free will, other similar constructs (e.</description>
+      <description>I have recently completed an MSc in Psychological Research Methods (at the University of Glasgow). I am now looking for work in research related to attitudes, health, computational modeling or all three.
+My Bachelors and Masters research projects are psychometrics-focussed, using techniques like Structural Equation Modeling to investigate the belief in free will, other similar constructs (e.g., Locus of Control), and Subjective Well-being.
+I made the animation above using gganimate, a package for R, which is the first programming language I learned.</description>
     </item>
     
   </channel>
