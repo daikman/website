@@ -6,17 +6,35 @@
     <description>Recent content in Tags on David Aikman</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 23 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 05 Nov 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Data Science</title>
+      <link>/tags/data-science/</link>
+      <pubDate>Thu, 05 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/data-science/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>R</title>
       <link>/tags/r/</link>
-      <pubDate>Tue, 23 Jun 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 05 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Statistics</title>
+      <link>/tags/statistics/</link>
+      <pubDate>Thu, 05 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/statistics/</guid>
       <description></description>
     </item>
     

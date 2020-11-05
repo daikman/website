@@ -6,10 +6,21 @@
     <description>Recent content on David Aikman</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 03 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 05 Nov 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Exploring Cross-Validation!</title>
+      <link>/2020/11/05/exploring-cross-validation/</link>
+      <pubDate>Thu, 05 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/11/05/exploring-cross-validation/</guid>
+      <description>Here are some demonstrations of different cross-validation techniques. For a broad explanation of cross-validation, see the bottom of this post.
+Simple Holdout Cross-ValidationRandomly splitting data into a training and testing set, once.
+Repeated Cross-ValidationLeave-\(p\)-OutThis algorithm randomly selects \(p\) observations to exclude from the training set. These \(p\) observations constitute the testing set. This process is repeated until all possible combinations of \(p\) data-points have been used as a testing set.</description>
+    </item>
     
     <item>
       <title>Bias and Noise</title>
@@ -102,9 +113,18 @@ Of the statistical tests of normality, the Shapiro-Wilk test is the most powerfu
       <pubDate>Thu, 05 May 2016 21:48:51 -0700</pubDate>
       
       <guid>/about/</guid>
-      <description>I have recently completed an MSc in Psychological Research Methods (at the University of Glasgow). I am now looking for work in research related to attitudes, health, computational modeling or all three.
-My Bachelors and Masters research projects are psychometrics-focussed, using techniques like Structural Equation Modeling to investigate the belief in free will, other similar constructs (e.g., Locus of Control), and Subjective Well-being.
+      <description>I have recently completed an MSc in Psychological Research Methods (at the University of Glasgow).
+My Bachelors and Masters research projects are psychometrics-focussed, using techniques like Structural Equation Modeling to investigate the measurement of the belief in free will and other similar constructs (e.g., Locus of Control), and their relationship to personality and Subjective Well-being.
 I made the animation above using gganimate, a package for R, which is the first programming language I learned.</description>
+    </item>
+    
+    <item>
+      <title>Portfolio</title>
+      <link>/portfolio-home/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/portfolio-home/</guid>
+      <description>coming soon, hopefully.</description>
     </item>
     
   </channel>
