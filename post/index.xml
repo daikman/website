@@ -6,10 +6,20 @@
     <description>Recent content in Posts on David Aikman</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 05 Nov 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 20 Jul 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Playing with D3</title>
+      <link>/2021/07/20/playing-with-d3/</link>
+      <pubDate>Tue, 20 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/2021/07/20/playing-with-d3/</guid>
+      <description>I wanted to try out using D3 in an R Markdown document, to see how it works. Using r2d3, it works really well!
+Me and Mandy Norrbo were messing around trying to make some purely fun stuff in D3, which you don’t really see too much. And this is what I made. I would usually go for p5.js to make stuff like this, but it was a nice challenge to do it in D3 instead.</description>
+    </item>
     
     <item>
       <title>Exploring Cross-Validation!</title>

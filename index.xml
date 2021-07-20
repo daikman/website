@@ -6,10 +6,31 @@
     <description>Recent content on David Aikman</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 05 Nov 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 20 Jul 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>About Me</title>
+      <link>/about/</link>
+      <pubDate>Tue, 20 Jul 2021 13:54:51 -0700</pubDate>
+      
+      <guid>/about/</guid>
+      <description>Hello! I&amp;rsquo;m David :)
+Right now (August 2021) I&amp;rsquo;m an &amp;lsquo;Information Analyst&amp;rsquo; at Public Health Scotland. I work in a team that is transforming the way reports are published - we make them reproducible. My team also helps maintain the open data portal found here: https://www.opendata.nhs.scot/.
+I used to be a researcher at Emerald Works (which has been rebranded as &amp;ldquo;Mind Tools for Business&amp;rdquo;), where I did things like data analysis using, writing and designing interactive research reports using D3.</description>
+    </item>
+    
+    <item>
+      <title>Playing with D3</title>
+      <link>/2021/07/20/playing-with-d3/</link>
+      <pubDate>Tue, 20 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/2021/07/20/playing-with-d3/</guid>
+      <description>I wanted to try out using D3 in an R Markdown document, to see how it works. Using r2d3, it works really well!
+Me and Mandy Norrbo were messing around trying to make some purely fun stuff in D3, which you don’t really see too much. And this is what I made. I would usually go for p5.js to make stuff like this, but it was a nice challenge to do it in D3 instead.</description>
+    </item>
     
     <item>
       <title>Exploring Cross-Validation!</title>
@@ -105,17 +126,6 @@ Basically, CLT says that when you find the means (or sums, or other functions) o
       <guid>/2019/11/14/false-normality/</guid>
       <description>pre {max-height: 300px;overflow-y: auto;}pre[class] {max-height: 300px;}A lot of statistical tests assume normal distribution of raw data or residuals from predicted model outcomes. One way to check for normality is visual, using histograms or Q-Q plots. Another way is statistical.
 Of the statistical tests of normality, the Shapiro-Wilk test is the most powerful. See Razali and Wah for further discussion about power.</description>
-    </item>
-    
-    <item>
-      <title>About Me</title>
-      <link>/about/</link>
-      <pubDate>Thu, 05 May 2016 21:48:51 -0700</pubDate>
-      
-      <guid>/about/</guid>
-      <description>Hello! I&amp;rsquo;m David :)
-I&amp;rsquo;m a researcher at Emerald Works, where the goal of my work is to make methodological advancements in measuring the impact of learning at the organisational and individual level. But I do a bunch of stuff day-to-day, like data analysis using R, writing and designing interactive research reports using D3.js, and assisting with the development of a product (a benchmarking tool) with an agile team.
-Previously, I was at the University of Glasgow studying for a BSc and an MSc.</description>
     </item>
     
     <item>
