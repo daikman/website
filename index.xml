@@ -18,8 +18,8 @@
       
       <guid>/about/</guid>
       <description>Hello! I&amp;rsquo;m David :)
-Right now (August 2021) I&amp;rsquo;m an &amp;lsquo;Information Analyst&amp;rsquo; at Public Health Scotland. I work in a team that is transforming the way reports are published - we make them reproducible. My team also helps maintain the open data portal found here: https://www.opendata.nhs.scot/.
-I used to be a researcher at Emerald Works (which has been rebranded as &amp;ldquo;Mind Tools for Business&amp;rdquo;), where I did things like data analysis using, writing and designing interactive research reports using D3.</description>
+Right now (August 2021) I&amp;rsquo;m Data Scientist at Public Health Scotland. I build infrastructure for the automation of the processing and publishing of data. I also lead the Open Data project.
+I used to be a researcher at Emerald Works (which has been rebranded as &amp;ldquo;Mind Tools for Business&amp;rdquo;), where I did things like data analysis using, writing and designing interactive research reports using D3.js, and assisting with the development of a product (a benchmarking tool) with an agile team.</description>
     </item>
     
     <item>
@@ -126,15 +126,6 @@ Basically, CLT says that when you find the means (or sums, or other functions) o
       <guid>/2019/11/14/false-normality/</guid>
       <description>pre {max-height: 300px;overflow-y: auto;}pre[class] {max-height: 300px;}A lot of statistical tests assume normal distribution of raw data or residuals from predicted model outcomes. One way to check for normality is visual, using histograms or Q-Q plots. Another way is statistical.
 Of the statistical tests of normality, the Shapiro-Wilk test is the most powerful. See Razali and Wah for further discussion about power.</description>
-    </item>
-    
-    <item>
-      <title>Portfolio</title>
-      <link>/portfolio-home/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/portfolio-home/</guid>
-      <description>coming soon, hopefully.</description>
     </item>
     
   </channel>
