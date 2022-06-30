@@ -6,10 +6,20 @@
     <description>Recent content on David Aikman</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 20 Jul 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 30 Jun 2022 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Making a portfolio website</title>
+      <link>/2022/06/30/making-a-portfolio-website/</link>
+      <pubDate>Thu, 30 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/2022/06/30/making-a-portfolio-website/</guid>
+      <description>Making my own portfolio/blog websiteI made a portfolio website using React, it looks like this:
+I wanted to have card-based content (i.e., grids of boxes) and the ability to navigate to different categories of portfolio items, rather than just list all items on the same page. I also wanted it to look fun, and have some kind of animation. You can’t see the animation in the screenshot, but I made the folders spin around and open and close.</description>
+    </item>
     
     <item>
       <title>About Me</title>

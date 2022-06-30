@@ -6,9 +6,19 @@
     <description>Recent content in Categories on David Aikman</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Thu, 30 Jun 2022 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Web Dev</title>
+      <link>/categories/web-dev/</link>
+      <pubDate>Thu, 30 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/web-dev/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

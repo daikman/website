@@ -1,0 +1,38 @@
+---
+title: Making a portfolio website
+author: David Aikman
+date: '2022-06-30'
+slug: making-a-portfolio-website
+categories:
+  - Web Dev
+tags:
+  - React
+  - HTML
+  - CSS
+---
+
+# Making my own portfolio website
+I made a portfolio website using [React](https://reactjs.org/), it looks like this:
+
+![](/images/portfolio-screenshot.PNG){width="100%"}
+
+I wanted to have card-based content (i.e., grids of boxes) and the ability to navigate to different categories of portfolio items, rather than just list all items on the same page. I also wanted it to look fun, and have some kind of animation. You can't see the animation in the screenshot, but I made the folders spin around and open and close.
+
+## Quirks
+There are a couple of interesting details about this project. One is the use of [Zdog](https://zzz.dog/) to create the 3D folder models/animations. I found this pretty fun, but I am not entirely happy with how the animations are controlled within the React framework (I used `useEffect` to update the model parameters at a specific interval).
+Another thing I had to do was change the standard `create-react-app` project in order to facilitate hosting with GitHub pages. I needed change the name of the build folder, and use `HashRouter` rather than `BrowserRouter` (due to their being no server interactivity).
+
+To change the name of the build folder, I created a file called `.env` in the root directory and added this line:
+
+``` {}
+BUILD_PATH = "docs"
+```
+
+To use the `HashRouter` I used the following line at the top of the component that uses a Router:
+
+``` {js}
+import { HashRouter as Router, Route, Routes } from 'react-router-dom'
+```
+
+## What I learned
+The main thing I learned while making this website was how to use build tools in web development. I had previously only used plain JavaScript, HTML and CSS to develop for the web. I think React mostly quite intuitive, although I found the standard `npx create-react-app` to be pretty bloated for a beginner.

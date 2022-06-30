@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.72.0" />
+
+
+<title>Making a portfolio website - David Aikman</title>
+<meta property="og:title" content="Making a portfolio website - David Aikman">
+
+
+  <link href='/favicon.ico' rel='icon' type='image/x-icon'/>
+
+
+
+  
+
+
+
+
+
+
+
+
+<link href='//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css' rel='stylesheet' type='text/css' />
+
+
+
+<link rel="stylesheet" href="/css/fonts.css" media="all">
+<link rel="stylesheet" href="/css/main.css" media="all">
+
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="/" class="nav-logo">
+    <img src="/images/medrawing.png"
+         width="200"
+         height="200"
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="https://daikman.github.io/#/portfolio">Portfolio</a></li>
+    
+    <li><a href="/">Blog</a></li>
+    
+    <li><a href="/about/">About Me</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+    <span class="article-duration">2 min read</span>
+    
+
+    <h1 class="article-title">Making a portfolio website</h1>
+
+    
+    <span class="article-date">2022-06-30</span>
+    
+
+    <div class="article-content">
+      
+
+
+<div id="making-my-own-portfolioblog-website" class="section level1">
+<h1>Making my own portfolio/blog website</h1>
+<p>I made a portfolio website using <a href="https://reactjs.org/">React</a>, it looks like this:</p>
+<p><img src="/images/portfolio-screenshot.PNG" style="width:100.0%" /></p>
+<p>I wanted to have card-based content (i.e., grids of boxes) and the ability to navigate to different categories of portfolio items, rather than just list all items on the same page. I also wanted it to look fun, and have some kind of animation. You can’t see the animation in the screenshot, but I made the folders spin around and open and close.</p>
+<div id="quirks" class="section level2">
+<h2>Quirks</h2>
+<p>There are a couple of interesting details about this project. One is the use of <a href="https://zzz.dog/">Zdog</a> to create the 3D folder models/animations. I found this pretty fun, but I am not entirely happy with how the animations are controlled within the React framework (I used <code>useEffect</code> to update the model parameters at a specific interval).
+Another thing I had to do was change the standard <code>create-react-app</code> project in order to facilitate hosting with GitHub pages. I needed change the name of the build folder, and use <code>HashRouter</code> rather than <code>BrowserRouter</code> (due to their being no server interactivity).</p>
+<p>To change the name of the build folder, I created a file called <code>.env</code> in the root directory and added this line:</p>
+<pre><code>BUILD_PATH = &quot;docs&quot;</code></pre>
+<p>To use the <code>HashRouter</code> I used the following line at the top of the component that uses a Router:</p>
+<pre class="js"><code>import { HashRouter as Router, Route, Routes } from &#39;react-router-dom&#39;</code></pre>
+<script type="text/javascript">
+import { HashRouter as Router, Route, Routes } from 'react-router-dom'
+</script>
+</div>
+<div id="what-i-learned" class="section level2">
+<h2>What I learned</h2>
+<p>The main thing I learned while making this website was how to use build tools in web development. I had previously only used plain JavaScript, HTML and CSS to develop for the web. I think React mostly quite intuitive, although I found the standard <code>npx create-react-app</code> to be pretty bloated for a beginner.</p>
+</div>
+</div>
+
+    </div>
+  </article>
+
+  
+
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="/index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+          </li>
+          <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="/images/hugo-logo.png" alt="Img link to Hugo website" width="22" height="22"></a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+    
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+<script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+
+
+
+    
+
+    
+  </body>
+</html>
+
