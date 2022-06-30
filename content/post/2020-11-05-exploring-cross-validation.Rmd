@@ -1,0 +1,46 @@
+---
+title: Exploring Cross-Validation!
+author: ''
+date: '2020-11-05'
+slug: exploring-cross-validation
+categories: []
+tags:
+  - Data Science
+  - Statistics
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+Here are some demonstrations of different cross-validation techniques. For a broad explanation of cross-validation, see the bottom of this post.
+
+# Simple Holdout Cross-Validation
+Randomly splitting data into a training and testing set, *once*.
+
+<iframe src="https://editor.p5js.org/daikman/embed/MJ14CMDnRn" style = "width: 400px; height: 200px; border: none"></iframe>
+
+# Repeated Cross-Validation
+
+### Leave-$p$-Out
+This algorithm randomly selects $p$ observations to exclude from the training set. These $p$ observations constitute the testing set. This process is repeated until all possible combinations of $p$ data-points have been used as a testing set. If $N = 1000$ and $p = 50$, then the total number of ways to split the data into testing and training is around $10\times e^{84}$. (*Note: you can calculate this for other combinations of $N$ and $p$ using the R code* `choose(N, p)`.)
+
+<iframe src="https://editor.p5js.org/daikman/embed/QfqAbqEKH" style = "width: 400px; height: 200px; border: none"></iframe>
+
+### $k$-folds
+Data-points are randomly partitioned into $k$ sub-samples. Then, one after another, each sub-sample is used as the testing set for a model fit to the data in all other sub-samples. The number of repetitions for this algorithm is equal to $k$.
+
+<iframe src="https://editor.p5js.org/daikman/embed/U2GomNWcK" style = "width: 400px; height: 200px; border: none"></iframe>
+
+<hr>
+
+# What is Cross-Validation?
+<div style = "font-size: 0.8em">
+After fitting a model to your data, you might want to know how well it would fit other, similar data. If your model does not fit other data very well, it may not be representative of the true relationships between the variables in your model. It may only represent relationships in the data used to fit the model. Determining the fit of a model on data that was not used to derive model parameters is known as cross-validation.
+
+In some cases, you would be able to collect new data to perform cross-validation, i.e., you could see how well a model trained on your original data fits to newly collected data. In others cases, it may be unfeasible to collect more data, but you are still interested in what would happen if you had more data from a similar data collection process, e.g., if your sample size was larger. 
+
+Cross-validation methods that do not require new data collection are based on the idea of a *holdout* sample. You split your data into two parts: a training set and a testing (or holdout) set. A model is fitted on the training set and 'tested' on the holdout set. The idea of 'testing' here refers to checking how well the model fits to the holdout sample. If the model fits well, this offers evidence for the generalisability of your model to other unseen data (e.g., data collected in the future).
+
+Repeated cross-validation methods go through different ways the data could be split into training and testing sets. You can then look at a model's performance across all the different ways the data was split, and draw conclusions from that. Repeated cross-validation reduces [bias](/2020/09/03/bias-and-noise/), as if you only choose one way to split the data up, your results might be a fluke, specific to the one way the data was split.
+</div>

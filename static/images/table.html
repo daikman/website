@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<style>body{background-color:white;}</style>
+
+
+</head>
+<body>
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+#tujygchzih .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#tujygchzih .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#tujygchzih .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#tujygchzih .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 4px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#tujygchzih .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#tujygchzih .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#tujygchzih .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#tujygchzih .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#tujygchzih .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#tujygchzih .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#tujygchzih .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#tujygchzih .gt_group_heading {
+  padding: 8px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#tujygchzih .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#tujygchzih .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#tujygchzih .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#tujygchzih .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#tujygchzih .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#tujygchzih .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 12px;
+}
+
+#tujygchzih .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#tujygchzih .gt_first_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+}
+
+#tujygchzih .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#tujygchzih .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#tujygchzih .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#tujygchzih .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#tujygchzih .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding: 4px;
+}
+
+#tujygchzih .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#tujygchzih .gt_sourcenote {
+  font-size: 90%;
+  padding: 4px;
+}
+
+#tujygchzih .gt_left {
+  text-align: left;
+}
+
+#tujygchzih .gt_center {
+  text-align: center;
+}
+
+#tujygchzih .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#tujygchzih .gt_font_normal {
+  font-weight: normal;
+}
+
+#tujygchzih .gt_font_bold {
+  font-weight: bold;
+}
+
+#tujygchzih .gt_font_italic {
+  font-style: italic;
+}
+
+#tujygchzih .gt_super {
+  font-size: 65%;
+}
+
+#tujygchzih .gt_footnote_marks {
+  font-style: italic;
+  font-size: 65%;
+}
+</style>
+<div id="tujygchzih" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+  
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">Condition</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">Sex</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">F/L Index</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">I/P Index</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">Frequency</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">URL</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr>
+      <td class="gt_row gt_left">Cervical Cancer</td>
+      <td class="gt_row gt_left">female</td>
+      <td class="gt_row gt_right">1.41</td>
+      <td class="gt_row gt_right">0.82</td>
+      <td class="gt_row gt_right">9</td>
+      <td class="gt_row gt_left">https://www.nhs.uk/conditions/cervical-cancer/</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">Breast Cancer (women)</td>
+      <td class="gt_row gt_left">female</td>
+      <td class="gt_row gt_right">0.91</td>
+      <td class="gt_row gt_right">0.34</td>
+      <td class="gt_row gt_right">10</td>
+      <td class="gt_row gt_left">https://www.nhs.uk/conditions/breast-cancer/</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">Endometriosis</td>
+      <td class="gt_row gt_left">female</td>
+      <td class="gt_row gt_right">0.54</td>
+      <td class="gt_row gt_right">0.12</td>
+      <td class="gt_row gt_right">4</td>
+      <td class="gt_row gt_left">https://www.nhs.uk/conditions/endometriosis/</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">Uterine Fibroids</td>
+      <td class="gt_row gt_left">female</td>
+      <td class="gt_row gt_right">2.25</td>
+      <td class="gt_row gt_right">1.57</td>
+      <td class="gt_row gt_right">11</td>
+      <td class="gt_row gt_left">https://www.nhs.uk/conditions/fibroids/</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">Polycystic Ovary Syndrome</td>
+      <td class="gt_row gt_left">female</td>
+      <td class="gt_row gt_right">1.30</td>
+      <td class="gt_row gt_right">0.43</td>
+      <td class="gt_row gt_right">6</td>
+      <td class="gt_row gt_left">https://www.nhs.uk/conditions/polycystic-ovary-syndrome-pcos/</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">Ovarian Cancer</td>
+      <td class="gt_row gt_left">female</td>
+      <td class="gt_row gt_right">1.06</td>
+      <td class="gt_row gt_right">0.40</td>
+      <td class="gt_row gt_right">6</td>
+      <td class="gt_row gt_left">https://www.nhs.uk/conditions/ovarian-cancer/</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">Vaginitis</td>
+      <td class="gt_row gt_left">female</td>
+      <td class="gt_row gt_right">0.00</td>
+      <td class="gt_row gt_right">0.00</td>
+      <td class="gt_row gt_right">0</td>
+      <td class="gt_row gt_left">https://www.nhs.uk/conditions/vaginitis/</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">Vulval Cancer</td>
+      <td class="gt_row gt_left">female</td>
+      <td class="gt_row gt_right">1.15</td>
+      <td class="gt_row gt_right">0.43</td>
+      <td class="gt_row gt_right">6</td>
+      <td class="gt_row gt_left">https://www.nhs.uk/conditions/vulval-cancer/</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">Vaginal Discharge</td>
+      <td class="gt_row gt_left">female</td>
+      <td class="gt_row gt_right">0.34</td>
+      <td class="gt_row gt_right">0.06</td>
+      <td class="gt_row gt_right">1</td>
+      <td class="gt_row gt_left">https://www.nhs.uk/conditions/vaginal-discharge/</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">Menopause</td>
+      <td class="gt_row gt_left">female</td>
+      <td class="gt_row gt_right">1.37</td>
+      <td class="gt_row gt_right">0.32</td>
+      <td class="gt_row gt_right">6</td>
+      <td class="gt_row gt_left">https://www.nhs.uk/conditions/menopause/</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">Uterus cancer</td>
+      <td class="gt_row gt_left">female</td>
+      <td class="gt_row gt_right">0.52</td>
+      <td class="gt_row gt_right">0.12</td>
+      <td class="gt_row gt_right">3</td>
+      <td class="gt_row gt_left">https://www.nhs.uk/conditions/womb-cancer/</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">Miscarriage</td>
+      <td class="gt_row gt_left">female</td>
+      <td class="gt_row gt_right">1.19</td>
+      <td class="gt_row gt_right">0.24</td>
+      <td class="gt_row gt_right">6</td>
+      <td class="gt_row gt_left">https://www.nhs.uk/conditions/miscarriage/</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">Periods</td>
+      <td class="gt_row gt_left">female</td>
+      <td class="gt_row gt_right">0.81</td>
+      <td class="gt_row gt_right">0.13</td>
+      <td class="gt_row gt_right">7</td>
+      <td class="gt_row gt_left">https://www.nhs.uk/conditions/periods/</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">Ectopic pregnancy</td>
+      <td class="gt_row gt_left">female</td>
+      <td class="gt_row gt_right">0.78</td>
+      <td class="gt_row gt_right">0.16</td>
+      <td class="gt_row gt_right">8</td>
+      <td class="gt_row gt_left">https://www.nhs.uk/conditions/ectopic-pregnancy/</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">Period pain</td>
+      <td class="gt_row gt_left">female</td>
+      <td class="gt_row gt_right">0.81</td>
+      <td class="gt_row gt_right">0.15</td>
+      <td class="gt_row gt_right">10</td>
+      <td class="gt_row gt_left">https://www.nhs.uk/conditions/period-pain/</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">Prostate cancer</td>
+      <td class="gt_row gt_left">male</td>
+      <td class="gt_row gt_right">1.56</td>
+      <td class="gt_row gt_right">0.55</td>
+      <td class="gt_row gt_right">12</td>
+      <td class="gt_row gt_left">https://www.nhs.uk/conditions/prostate-cancer/</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">Testicular cancer</td>
+      <td class="gt_row gt_left">male</td>
+      <td class="gt_row gt_right">1.61</td>
+      <td class="gt_row gt_right">1.07</td>
+      <td class="gt_row gt_right">16</td>
+      <td class="gt_row gt_left">https://www.nhs.uk/conditions/testicular-cancer/</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">Erectile dysfunction</td>
+      <td class="gt_row gt_left">male</td>
+      <td class="gt_row gt_right">0.46</td>
+      <td class="gt_row gt_right">0.13</td>
+      <td class="gt_row gt_right">3</td>
+      <td class="gt_row gt_left">https://www.nhs.uk/conditions/erection-problems-erectile-dysfunction/</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">Epididymitis</td>
+      <td class="gt_row gt_left">male</td>
+      <td class="gt_row gt_right">0.30</td>
+      <td class="gt_row gt_right">0.05</td>
+      <td class="gt_row gt_right">2</td>
+      <td class="gt_row gt_left">https://www.nhs.uk/conditions/epididymitis/</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">BPH</td>
+      <td class="gt_row gt_left">male</td>
+      <td class="gt_row gt_right">1.34</td>
+      <td class="gt_row gt_right">0.32</td>
+      <td class="gt_row gt_right">6</td>
+      <td class="gt_row gt_left">https://www.nhs.uk/conditions/prostate-enlargement/</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">Penile Cancer</td>
+      <td class="gt_row gt_left">male</td>
+      <td class="gt_row gt_right">0.41</td>
+      <td class="gt_row gt_right">0.12</td>
+      <td class="gt_row gt_right">4</td>
+      <td class="gt_row gt_left">https://www.nhs.uk/conditions/penile-cancer/</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">TURPS</td>
+      <td class="gt_row gt_left">male</td>
+      <td class="gt_row gt_right">0.78</td>
+      <td class="gt_row gt_right">0.22</td>
+      <td class="gt_row gt_right">5</td>
+      <td class="gt_row gt_left">https://www.nhs.uk/conditions/transurethral-resection-of-the-prostate-turp/</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">Phimosis</td>
+      <td class="gt_row gt_left">male</td>
+      <td class="gt_row gt_right">0.24</td>
+      <td class="gt_row gt_right">0.13</td>
+      <td class="gt_row gt_right">2</td>
+      <td class="gt_row gt_left">https://www.nhs.uk/conditions/phimosis/</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">Balanitis</td>
+      <td class="gt_row gt_left">male</td>
+      <td class="gt_row gt_right">0.36</td>
+      <td class="gt_row gt_right">0.07</td>
+      <td class="gt_row gt_right">2</td>
+      <td class="gt_row gt_left">https://www.nhs.uk/conditions/balanitis/</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">Prostatitis</td>
+      <td class="gt_row gt_left">male</td>
+      <td class="gt_row gt_right">0.22</td>
+      <td class="gt_row gt_right">0.05</td>
+      <td class="gt_row gt_right">2</td>
+      <td class="gt_row gt_left">https://www.nhs.uk/conditions/prostatitis/</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">haematospermia</td>
+      <td class="gt_row gt_left">male</td>
+      <td class="gt_row gt_right">0.00</td>
+      <td class="gt_row gt_right">0.00</td>
+      <td class="gt_row gt_right">0</td>
+      <td class="gt_row gt_left">https://www.nhs.uk/conditions/blood-in-semen/</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">Breast cancer (men)</td>
+      <td class="gt_row gt_left">male</td>
+      <td class="gt_row gt_right">2.21</td>
+      <td class="gt_row gt_right">0.44</td>
+      <td class="gt_row gt_right">12</td>
+      <td class="gt_row gt_left">https://www.nhs.uk/conditions/breast-cancer-in-men/</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">Low sperm count</td>
+      <td class="gt_row gt_left">male</td>
+      <td class="gt_row gt_right">0.51</td>
+      <td class="gt_row gt_right">0.10</td>
+      <td class="gt_row gt_right">5</td>
+      <td class="gt_row gt_left">https://www.nhs.uk/conditions/low-sperm-count/</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">testicle lumps and swellings</td>
+      <td class="gt_row gt_left">male</td>
+      <td class="gt_row gt_right">0.00</td>
+      <td class="gt_row gt_right">0.00</td>
+      <td class="gt_row gt_right">0</td>
+      <td class="gt_row gt_left">https://www.nhs.uk/conditions/testicle-lumps-and-swellings/</td>
+    </tr>
+    <tr>
+      <td class="gt_row gt_left">Circumcision</td>
+      <td class="gt_row gt_left">male</td>
+      <td class="gt_row gt_right">0.79</td>
+      <td class="gt_row gt_right">0.17</td>
+      <td class="gt_row gt_right">9</td>
+      <td class="gt_row gt_left">https://www.nhs.uk/conditions/circumcision-in-men/</td>
+    </tr>
+  </tbody>
+  
+  
+</table></div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+---
+title: Exploring Cross-Validation!
+author: ''
+date: '2020-11-05'
+slug: exploring-cross-validation
+categories: []
+tags:
+  - Data Science
+  - Statistics
+---
+
+
+
+<p>Here are some demonstrations of different cross-validation techniques. For a broad explanation of cross-validation, see the bottom of this post.</p>
+<div id="simple-holdout-cross-validation" class="section level1">
+<h1>Simple Holdout Cross-Validation</h1>
+<p>Randomly splitting data into a training and testing set, <em>once</em>.</p>
+<iframe src="https://editor.p5js.org/daikman/embed/MJ14CMDnRn" style="width: 400px; height: 200px; border: none">
+</iframe>
+</div>
+<div id="repeated-cross-validation" class="section level1">
+<h1>Repeated Cross-Validation</h1>
+<div id="leave-p-out" class="section level3">
+<h3>Leave-<span class="math inline">\(p\)</span>-Out</h3>
+<p>This algorithm randomly selects <span class="math inline">\(p\)</span> observations to exclude from the training set. These <span class="math inline">\(p\)</span> observations constitute the testing set. This process is repeated until all possible combinations of <span class="math inline">\(p\)</span> data-points have been used as a testing set. If <span class="math inline">\(N = 1000\)</span> and <span class="math inline">\(p = 50\)</span>, then the total number of ways to split the data into testing and training is around <span class="math inline">\(10\times e^{84}\)</span>. (<em>Note: you can calculate this for other combinations of <span class="math inline">\(N\)</span> and <span class="math inline">\(p\)</span> using the R code</em> <code>choose(N, p)</code>.)</p>
+<iframe src="https://editor.p5js.org/daikman/embed/QfqAbqEKH" style="width: 400px; height: 200px; border: none">
+</iframe>
+</div>
+<div id="k-folds" class="section level3">
+<h3><span class="math inline">\(k\)</span>-folds</h3>
+<p>Data-points are randomly partitioned into <span class="math inline">\(k\)</span> sub-samples. Then, one after another, each sub-sample is used as the testing set for a model fit to the data in all other sub-samples. The number of repetitions for this algorithm is equal to <span class="math inline">\(k\)</span>.</p>
+<iframe src="https://editor.p5js.org/daikman/embed/U2GomNWcK" style="width: 400px; height: 200px; border: none">
+</iframe>
+<hr>
+</div>
+</div>
+<div id="what-is-cross-validation" class="section level1">
+<h1>What is Cross-Validation?</h1>
+<div style="font-size: 0.8em">
+<p>After fitting a model to your data, you might want to know how well it would fit other, similar data. If your model does not fit other data very well, it may not be representative of the true relationships between the variables in your model. It may only represent relationships in the data used to fit the model. Determining the fit of a model on data that was not used to derive model parameters is known as cross-validation.</p>
+<p>In some cases, you would be able to collect new data to perform cross-validation, i.e., you could see how well a model trained on your original data fits to newly collected data. In others cases, it may be unfeasible to collect more data, but you are still interested in what would happen if you had more data from a similar data collection process, e.g., if your sample size was larger.</p>
+<p>Cross-validation methods that do not require new data collection are based on the idea of a <em>holdout</em> sample. You split your data into two parts: a training set and a testing (or holdout) set. A model is fitted on the training set and ‘tested’ on the holdout set. The idea of ‘testing’ here refers to checking how well the model fits to the holdout sample. If the model fits well, this offers evidence for the generalisability of your model to other unseen data (e.g., data collected in the future).</p>
+<p>Repeated cross-validation methods go through different ways the data could be split into training and testing sets. You can then look at a model’s performance across all the different ways the data was split, and draw conclusions from that. Repeated cross-validation reduces <a href="/2020/09/03/bias-and-noise/">bias</a>, as if you only choose one way to split the data up, your results might be a fluke, specific to the one way the data was split.</p>
+</div>
+</div>

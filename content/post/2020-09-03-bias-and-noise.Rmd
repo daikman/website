@@ -1,0 +1,32 @@
+---
+title: Bias and Noise
+author: David Aikman
+date: '2020-09-03'
+slug: bias-and-noise
+categories: []
+tags: []
+---
+
+<div style = "display: block;
+              margin-left: auto;
+              margin-right: auto;">
+  <iframe src="https://editor.p5js.org/daikman/embed/6TEyGFkgm"
+  style="width: 100%; height: 512px; border: none;"></iframe>
+</div>
+
+Imagine you've hit this target 20 times, with whatever weapon you'd like. Your hits are represented by the yellow dots. You were trying to hit the bullseye, but you might not have been completely accurate. There might have been some bias in your aim, which means you are accidentally aiming at a point other than the bullseye. And there might have been some noise. This means you do not hit where you are aiming 100% of the time. 
+
+Increasing the noise using the slider increases the distance between the dots and the centre of the dots (where the dashed blue lines meet) on average. When you increase the bias, the centre of the dots moves further away from the bullseye. A blue line shows how biased the aim is, and a blue circle shows other points on the target with the same level of bias (they are the same distance from the bullseye). 
+
+One interesting thing I noticed when making this demonstration is that when there is any bias in your aim, you need noise in order to ever hit the bullseye. So there are cases when noise would be beneficial.
+
+Outside of this nice target example, bias and noise are relevant in many domains, including everyday decision-making. Whenever you (or a machine) needs to make a series of decisions, you are probably not going to be 100% accurate - there will be some error. How much of this error is caused by accidentally aiming in the wrong place (bias) and how much is caused by not hitting the place you're aiming for (noise)? This is an important distinction if you want to know how to reduce error.
+
+For example, if you are creating a budget for the next year, you might want to estimate how much money you will be spending each month. Are you systematically over/under-estimating? This would be bias. And are you randomly making mistakes with no particular direction? That would be noise. In this case, you may actually want bias, as over-estimates of monthly spending might lead to more frugal decision-making, reducing the risk of over-spending in a given month. A lot of noise might be a problem, though, as highly inconsistent spending estimates may undermine decisions based on those estimates. 
+
+Here are a couple interesting articles about bias and noise:
+
+* [Reducing Discrimination: A Bias Versus Noise Perspective](https://static1.squarespace.com/static/5d5d5e7904bf1c00017de915/t/5dacc56573275234da7c911f/1571603813518/reducing-discrimination.pdf). *Axt, J. R., & Lai, C. K. (2019). Journal of personality and social psychology, 117(1), 26.*
+
+* [Noise](https://static1.squarespace.com/static/5b86a6a35b409bf1be02158f/t/5c7eed02e79c7045eb839781/1551822083038/HR_Supplement_1-1_HBR_Noise_Oct.2016.pdf). *Kahneman, D., Rosenfield, A. M., Gandhi, L., & Blaser, T. (2016). Harvard Bus Rev, 38-46.*
+
