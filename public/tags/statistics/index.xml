@@ -6,11 +6,7 @@
     <description>Recent content in Statistics on David Aikman</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 05 Nov 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/statistics/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 05 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="/tags/statistics/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Exploring Cross-Validation!</title>
       <link>/2020/11/05/exploring-cross-validation/</link>
@@ -19,7 +15,7 @@
       <guid>/2020/11/05/exploring-cross-validation/</guid>
       <description>Here are some demonstrations of different cross-validation techniques. For a broad explanation of cross-validation, see the bottom of this post.
 Simple Holdout Cross-ValidationRandomly splitting data into a training and testing set, once.
-Repeated Cross-ValidationLeave-\(p\)-OutThis algorithm randomly selects \(p\) observations to exclude from the training set. These \(p\) observations constitute the testing set. This process is repeated until all possible combinations of \(p\) data-points have been used as a testing set.</description>
+Repeated Cross-ValidationLeave-\(p\)-OutThis algorithm randomly selects \(p\) observations to exclude from the training set. These \(p\) observations constitute the testing set. This process is repeated until all possible combinations of \(p\) data-points have been used as a testing set.</description>
     </item>
     
   </channel>

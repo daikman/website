@@ -6,10 +6,18 @@
     <description>Recent content in Posts on David Aikman</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 30 Jun 2022 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Fri, 02 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>fun-stats: making a statistics library for JavaScript</title>
+      <link>/2022/09/02/fun-stats-making-a-statistics-library-for-javascript/</link>
+      <pubDate>Fri, 02 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/2022/09/02/fun-stats-making-a-statistics-library-for-javascript/</guid>
+      <description>I recently made a JavaScript library for fundamental statistics (fun-stats).
+It was fun! I learned how to use rollup.js for bundlingcode, and how to publish packages to npm. I also learned a lot about the mathematics behind the statistics I have been applying for years, which is a hole in my knowledge I have been wanting to fill for a while.
+my package on npm
+You can see the documentation for this package here.</description>
+    </item>
     
     <item>
       <title>Making a portfolio website</title>
@@ -39,7 +47,7 @@ Me and Mandy Norrbo were messing around trying to make some purely fun stuff in 
       <guid>/2020/11/05/exploring-cross-validation/</guid>
       <description>Here are some demonstrations of different cross-validation techniques. For a broad explanation of cross-validation, see the bottom of this post.
 Simple Holdout Cross-ValidationRandomly splitting data into a training and testing set, once.
-Repeated Cross-ValidationLeave-\(p\)-OutThis algorithm randomly selects \(p\) observations to exclude from the training set. These \(p\) observations constitute the testing set. This process is repeated until all possible combinations of \(p\) data-points have been used as a testing set.</description>
+Repeated Cross-ValidationLeave-\(p\)-OutThis algorithm randomly selects \(p\) observations to exclude from the training set. These \(p\) observations constitute the testing set. This process is repeated until all possible combinations of \(p\) data-points have been used as a testing set.</description>
     </item>
     
     <item>
@@ -59,10 +67,11 @@ Simple Holdout Cross-ValidationRandomly splitting data into a training and test
       <guid>/2020/06/23/invisible-women-nhs-web-scraping/</guid>
       <description>After reading Invisible Women, I happened to come across this article on WebMD about menstrual pain that lists risk factors like this:
 &#34;The following circumstances may make a woman more likely to experience menstrual cramps:
-She started her first period at an early age (younger than 11 years).
-Her menstrual periods are heavy.
-She is overweight or obese.
-She smokes cigarettes or uses alcohol.</description>
+She started her first period at an early age (younger than 11 years).
+Her menstrual periods are heavy.
+She is overweight or obese.
+She smokes cigarettes or uses alcohol.
+She has never been pregnant.&#34;</description>
     </item>
     
     <item>
@@ -94,7 +103,8 @@ Each circle represents a person. The colour of the circle shows what that person
       <guid>/2020/05/02/hering-illusion/</guid>
       <description>This is the Hering Illusion!
 Click anywhere on the animation to take control (then click again to relinquish your iron grip).
-The straight red lines should appear to be bent when they are close enough to the centre of the radial lines. If you wait, the red lines will change into a red square (not because of the illusion - I just programmed a square to replace them).</description>
+The straight red lines should appear to be bent when they are close enough to the centre of the radial lines. If you wait, the red lines will change into a red square (not because of the illusion - I just programmed a square to replace them).
+Learn more about the illusion here on the Illusions Index.</description>
     </item>
     
     <item>
@@ -103,8 +113,9 @@ The straight red lines should appear to be bent when they are close enough to th
       <pubDate>Tue, 03 Dec 2019 00:00:00 +0000</pubDate>
       
       <guid>/2019/12/03/central-limit-theorem-and-latent-variables/</guid>
-      <description>pre {max-height: 300px;overflow-y: auto;}pre[class] {max-height: 300px;}I have recently come across the concept of Central Limit Theorem (CLT), and wanted to visualise the phenomenon using an interactive  shiny  app.
-Basically, CLT says that when you find the means (or sums, or other functions) of many variables, the resulting distribution is likely to be normal, independent of the distributions of each variable.</description>
+      <description>I have recently come across the concept of Central Limit Theorem (CLT), and wanted to visualise the phenomenon using an interactive shiny app.
+Basically, CLT says that when you find the means (or sums, or other functions) of many variables, the resulting distribution is likely to be normal, independent of the distributions of each variable.
+In the context of Psychometrics, CLT means that multi-item measures may produce normally distributed data when aggregated, regardless of the distribution of responses to each individual item.</description>
     </item>
     
     <item>
@@ -113,8 +124,8 @@ Basically, CLT says that when you find the means (or sums, or other functions) o
       <pubDate>Tue, 26 Nov 2019 00:00:00 +0000</pubDate>
       
       <guid>/2019/11/26/correlation-p-values/</guid>
-      <description>pre {max-height: 300px;overflow-y: auto;}pre[class] {max-height: 300px;}In Daniel Laken’s MOOC, Improving Your Statistical Inferences, he discusses the distribution of p-values you can expect from a t-test when there is a true effect, and when there is not.
-If there is no true effect, all p-values are equally likely.If there is a true effect, the probability of seeing a significant p-value is equivalent to the power of the test.</description>
+      <description>In Daniel Laken’s MOOC, Improving Your Statistical Inferences, he discusses the distribution of p-values you can expect from a t-test when there is a true effect, and when there is not.
+If there is no true effect, all p-values are equally likely.If there is a true effect, the probability of seeing a significant p-value is equivalent to the power of the test.I decided to try some simulations for myself, but instead of using t-tests, I used Spearman’s Rank correlations.</description>
     </item>
     
     <item>
@@ -123,8 +134,9 @@ Basically, CLT says that when you find the means (or sums, or other functions) o
       <pubDate>Thu, 14 Nov 2019 00:00:00 +0000</pubDate>
       
       <guid>/2019/11/14/false-normality/</guid>
-      <description>pre {max-height: 300px;overflow-y: auto;}pre[class] {max-height: 300px;}A lot of statistical tests assume normal distribution of raw data or residuals from predicted model outcomes. One way to check for normality is visual, using histograms or Q-Q plots. Another way is statistical.
-Of the statistical tests of normality, the Shapiro-Wilk test is the most powerful. See Razali and Wah for further discussion about power.</description>
+      <description>A lot of statistical tests assume normal distribution of raw data or residuals from predicted model outcomes. One way to check for normality is visual, using histograms or Q-Q plots. Another way is statistical.
+Of the statistical tests of normality, the Shapiro-Wilk test is the most powerful. See Razali and Wah for further discussion about power.
+I’m more interested in the false-positive rate of the Shapiro-Wilk test than it’s power (the true-positive rate), asif the test falsely identifies data from a non-normal population as normal, it would undermine further analyses, and the conclusions of a study.</description>
     </item>
     
   </channel>

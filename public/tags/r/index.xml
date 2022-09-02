@@ -6,11 +6,7 @@
     <description>Recent content in R on David Aikman</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 23 Jun 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/r/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 23 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="/tags/r/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Invisible Women: NHS Condition Descriptions</title>
       <link>/2020/06/23/invisible-women-nhs-web-scraping/</link>
@@ -19,10 +15,11 @@
       <guid>/2020/06/23/invisible-women-nhs-web-scraping/</guid>
       <description>After reading Invisible Women, I happened to come across this article on WebMD about menstrual pain that lists risk factors like this:
 &#34;The following circumstances may make a woman more likely to experience menstrual cramps:
-She started her first period at an early age (younger than 11 years).
-Her menstrual periods are heavy.
-She is overweight or obese.
-She smokes cigarettes or uses alcohol.</description>
+She started her first period at an early age (younger than 11 years).
+Her menstrual periods are heavy.
+She is overweight or obese.
+She smokes cigarettes or uses alcohol.
+She has never been pregnant.&#34;</description>
     </item>
     
     <item>
@@ -31,8 +28,9 @@
       <pubDate>Thu, 14 Nov 2019 00:00:00 +0000</pubDate>
       
       <guid>/2019/11/14/false-normality/</guid>
-      <description>pre {max-height: 300px;overflow-y: auto;}pre[class] {max-height: 300px;}A lot of statistical tests assume normal distribution of raw data or residuals from predicted model outcomes. One way to check for normality is visual, using histograms or Q-Q plots. Another way is statistical.
-Of the statistical tests of normality, the Shapiro-Wilk test is the most powerful. See Razali and Wah for further discussion about power.</description>
+      <description>A lot of statistical tests assume normal distribution of raw data or residuals from predicted model outcomes. One way to check for normality is visual, using histograms or Q-Q plots. Another way is statistical.
+Of the statistical tests of normality, the Shapiro-Wilk test is the most powerful. See Razali and Wah for further discussion about power.
+I’m more interested in the false-positive rate of the Shapiro-Wilk test than it’s power (the true-positive rate), asif the test falsely identifies data from a non-normal population as normal, it would undermine further analyses, and the conclusions of a study.</description>
     </item>
     
   </channel>

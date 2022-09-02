@@ -6,10 +6,18 @@
     <description>Recent content in Web Dev on David Aikman</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 30 Jun 2022 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/categories/web-dev/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Fri, 02 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="/categories/web-dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>fun-stats: making a statistics library for JavaScript</title>
+      <link>/2022/09/02/fun-stats-making-a-statistics-library-for-javascript/</link>
+      <pubDate>Fri, 02 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/2022/09/02/fun-stats-making-a-statistics-library-for-javascript/</guid>
+      <description>I recently made a JavaScript library for fundamental statistics (fun-stats).
+It was fun! I learned how to use rollup.js for bundlingcode, and how to publish packages to npm. I also learned a lot about the mathematics behind the statistics I have been applying for years, which is a hole in my knowledge I have been wanting to fill for a while.
+my package on npm
+You can see the documentation for this package here.</description>
+    </item>
     
     <item>
       <title>Making a portfolio website</title>
